@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verses display page">
+    <title>Verses Display</title>
+    <link rel="stylesheet" href="gopal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="font-buttons">
+            <button onclick="increaseFontSize()">+</button>
+            <button onclick="decreaseFontSize()">-</button>
+           
+        </div>
+        <span id="prayerHeading">गोपाल सहस्त्रनाम</span>
+        <button class="option-button" onclick="toggleDropdown()">&#8942;</button>
+        <div class="option-dropdown" id="optionDropdown">
+            <!-- Book names will be populated here -->
+        </div>
+        <div class="option-dropdown" id="subOptionDropdown"></div>
+    </div>
+    <div class="container" id="verseContainer">
+        <div class="verse" id="verse"></div>
+    </div>
+    <script src="gopal.js"></script>
+    <script src="data.js"></script>
+</body>
+</html>
+
+

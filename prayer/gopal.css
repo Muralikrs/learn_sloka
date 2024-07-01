@@ -1,0 +1,191 @@
+/* Base styles */
+body {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: 1rem; /* Base font size */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #F1D2A3;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: #D39758;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#prayerHeading {
+    font-size: calc(5vh - 10px); /* Adjust font size based on container height */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+
+
+.font-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.font-buttons button {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: black;
+    border-radius: 4px;
+}
+
+.option-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 2vh;
+}
+
+.option-dropdown {
+    margin-top: 20px;
+    display: none;
+    position: absolute;
+    right: 10px;
+    background: #D39758;
+    border: 1px solid #f35b41;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    margin-right: 1vh;
+}
+
+.option-dropdown.active {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    margin-right: 2vh;
+    background-color: #f35b41;
+    color: white;
+}
+
+/* Verse container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.verse {
+    font-size: 5vh;
+    position: relative;
+}
+
+#playAudio {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    #prayerHeading {
+        font-size: calc(4vh - 8px); /* Smaller font size for mobile */
+    }
+
+    .font-buttons {
+        gap: 5px;
+    }
+
+    .font-buttons button {
+        font-size: 1.2rem;
+        padding: 3px 6px;
+    }
+
+    .option-button {
+        font-size: 1.2rem;
+    }
+
+    .option-dropdown {
+        top: calc(8% + 5px); /* Adjust position for mobile */
+    }
+
+    .dropdown-item {
+        padding: 8px;
+    }
+
+    .verse {
+        font-size: 4vh; /* Smaller font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    #prayerHeading {
+        font-size: calc(3.5vh - 7px); /* Smaller font size for very small screens */
+    }
+
+    .font-buttons {
+        gap: 3px;
+    }
+
+    .font-buttons button {
+        font-size: 1rem;
+        padding: 2px 4px;
+    }
+
+    .option-button {
+        font-size: 1rem;
+    }
+
+    .option-dropdown {
+        top: calc(8% + 3px); /* Adjust position for very small screens */
+    }
+
+    .dropdown-item {
+        padding: 6px;
+    }
+
+    .verse {
+        font-size: 3.5vh; /* Smaller font size for very small screens */
+    }
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) and (orientation: landscape) {
+    #prayerHeading {
+        font-size: 5vh; /* Adjusted font size for landscape mobile */
+    }
+
+    .verse {
+        font-size: 4vh; /* Adjusted font size for landscape mobile */
+    }
+}
+
+@media (max-width: 480px) and (orientation: landscape) {
+    #prayerHeading {
+        font-size: calc(3.5vh - 7px); /* Adjusted font size for very small landscape screens */
+    }
+
+    .verse {
+        font-size: 3.5vh; /* Adjusted font size for very small landscape screens */
+    }
+}
